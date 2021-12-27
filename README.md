@@ -16,7 +16,7 @@ ActiveKsql allows you to perform SQL requests to your ksqlDB server.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'active_ksql'
+gem 'active_ksql', '0.1.0.alpha'
 ```
 
 And then execute:
