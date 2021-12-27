@@ -10,6 +10,7 @@
 [![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE) ![gem](https://img.shields.io/badge/gem-0.1.0.alpha-blue) [![stability-alpha](https://img.shields.io/badge/stability-alpha-f4d03f.svg)](https://github.com/mkenney/software-guides/blob/master/STABILITY-BADGES.md#alpha) 
 
 ActiveKsql allows you to perform SQL requests to your ksqlDB server.
+You can find the ksqlDB official documentation [here](https://docs.ksqldb.io/en/latest/developer-guide/ksqldb-reference/quick-reference/).
 
 ## Installation
 
