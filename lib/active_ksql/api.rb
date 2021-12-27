@@ -21,16 +21,42 @@ module ActiveKsql
       @client = HTTParty
     end
 
-    def ksql(sql = {}, streams_properties: nil, session_variables: nil, command_sequence_number: nil)
+    #
+    # Perform requests to the /ksql endpoint of ksqlDB REST API
+    #
+    # @param [String] sql The ksqlDB SQL Statement
+    # @param [Hash] streams_properties ksqlDB streamsProperties param
+    # @param [Hash] session_variables ksqlDB sessionVariables param
+    # @param [Int] command_sequence_number ksqlDB commandSequenceNumber param
+    #
+    # @return [Hash/Array] Request response
+    #
+    def ksql(sql, streams_properties: nil, session_variables: nil, command_sequence_number: nil)
       post(KSQL_ENDPOINT, body: { ksql: sql, streamsProperties: streams_properties, sessionVariables: session_variables, commandSequenceNumber: command_sequence_number }.compact)
     end
 
-    def query(sql = {}, streams_properties: nil)
-      post(QUERY_ENDPOINT, body: { sql: sql, streamsProperties: streams_properties }.compact)
+    #
+    # Perform requests to the /query endpoint of ksqlDB REST API
+    #
+    # @param [String] sql The ksqlDB SQL Statement
+    # @param [Hash] streams_properties ksqlDB streamsProperties param
+    #
+    # @return [Hash/Array] Request response
+    #
+    def query(sql, streams_properties: nil)
+      post(QUERY_ENDPOINT, body: { ksql: sql, streamsProperties: streams_properties }.compact)
     end
 
     private
 
+      #
+      # Perform the HTTP Request
+      #
+      # @param [String] endpoint ksqlDB REST API Endpoint
+      # @param [Hash] body HTTP Request Body
+      #
+      # @return [Hash/Array] Request response
+      #
       def post(endpoint, body: {})
         client.post("#{base_uri}/#{endpoint}", headers: headers, body: body.to_json).parsed_response
       end
