@@ -1,3 +1,8 @@
+<p align="center">
+  <img width="250" src="https://user-images.githubusercontent.com/50866745/147449973-a743b690-fef4-4b97-86d3-cc01f1695118.png" >
+</p>
+
+
 # ActiveKsql
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/active_ksql`. To experiment with that code, run `bin/console` for an interactive prompt.
