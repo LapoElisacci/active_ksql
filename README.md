@@ -17,7 +17,7 @@ You can find the ksqlDB official documentation [here](https://docs.ksqldb.io/en/
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'active_ksql', '0.1.0.alpha'
+gem 'active_ksql', '0.1.0.alpha.1'
 ```
 
 And then execute:
